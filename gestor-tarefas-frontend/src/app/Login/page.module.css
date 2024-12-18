@@ -1,0 +1,205 @@
+.container { 
+    display: flex;
+    height: 100vh;
+    background-color:#DEEFFF;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Contêiner da estrela */
+.starContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem; /* Espaço entre a estrela e o título */
+}
+
+/* Imagem da estrela */
+.starImage {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.eyeIcon {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+.inputWrapper {
+    position: relative;
+    width: 100%;
+}
+
+
+/* Área da imagem */
+.imageSection {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 15px; /* Adicionado border-radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 2rem; /* Adicionado um pouco de espaçamento interno */
+}
+
+.imageSection img {
+    max-width: 100%;
+    height: auto;
+    width: 80%;  /* A imagem vai ocupar 50% da largura */
+}
+
+/* Área do formulário */
+.formSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 40px 60px;
+    border-radius: 15px; /* Adicionado border-radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilização do título */
+.formSection h1 { 
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.formSection p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Formulário */
+.form { 
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.label { 
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.input { 
+    border: none;  
+    border-bottom: 2px solid #000000;  
+    padding: 0.5rem 0.8rem;  
+    font-size: 0.8rem;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    width: 100%;  
+    background-color: transparent; 
+    transition: border-color 0.3s ease;  
+}
+
+/* Foco no input */
+.input:focus {
+    border-bottom: 2px solid #007bff;  
+}
+
+/* Estilo do placeholder */
+.input::placeholder {
+    color: #aaa;  
+}
+
+/* Botão principal */
+.button {
+    padding: 0.8rem 2rem; /* Adiciona mais padding horizontal */
+    background-color: #007bff; /* Cor de fundo azul */
+    color: #fff;
+    border: none;
+    border-radius: 50px; /* Bordas arredondadas */
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase; /* Transformação do texto para maiúsculas */
+    font-weight: 600; /* Deixa o texto mais forte */
+    transition: all 0.3s ease; /* Transição suave para todos os efeitos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Altera para um tom mais escuro de azul */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+    transform: translateY(-3px); /* Efeito de elevação */
+}
+
+.button:active {
+    background-color: #004085; /* Cor mais escura ao clicar */
+    transform: translateY(0); /* Volta para a posição original */
+}
+
+.button:focus {
+    outline: none; /* Remove o contorno do foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.6); /* Sombra azul ao focar */
+}
+
+/* Efeito de gradiente no fundo */
+.button {
+    background-image: linear-gradient(45deg, #007bff, #00c6ff); /* Gradiente azul */
+}
+/* Botão Google */
+.googleLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.googleLogin img {
+    width: 20px;
+    margin-right: 0.5rem;
+}
+
+.googleLogin span {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Lembre-me e Esqueceu Senha */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;  /* Alinha verticalmente o checkbox e o texto */
+    gap: 0.5rem;  /* Ajuste do espaçamento entre o checkbox e o texto */
+    /* Espaço abaixo do checkbox */
+}
+
+.checkbox input {  
+    cursor: pointer;
+    margin: 0; /* Remove a margem padrão do input */
+    width: auto; /* Certifica-se de que o checkbox não vai se esticar */
+    height: auto; /* Certifica-se de que o checkbox não vai se esticar */
+}
+
+.checkbox label {
+    cursor: pointer;
+    font-size: 0.9rem;  /* Tamanho da fonte da frase */
+    color: #333;  /* Cor do texto */
+    line-height: 0;  /* Espaçamento entre linhas para evitar que o texto fique apertado */
+}
+
+/* Ajuste para melhorar o foco no checkbox */
+.checkbox input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);  /* Adiciona uma sombra suave ao focar */
+}
