@@ -1,0 +1,288 @@
+.container { 
+    display: flex;
+    height: 100vh;
+    background-color:#DEEFFF;
+    font-family: "Poppins", sans-serif;
+}
+
+.starContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.starImage {
+    width: 50px;
+    height: auto;
+}
+
+.eyeIcon {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+.inputWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.imageSection {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--color-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.imageSection img {
+    max-width: 100%;
+    height: auto;
+    width: 80%;
+}
+
+.formSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formSection h1 { 
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.formSection p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.form { 
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.label { 
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.input { 
+    border: none;  
+    border-bottom: 2px solid #000000;  
+    color: #000;
+    padding: 0.5rem 0.8rem;  
+    font-size: 0.8rem;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    width: 100%;  
+    background-color: transparent; 
+    transition: border-color 0.3s ease;  
+}
+
+.input:focus {
+    border-bottom: 2px solid #007bff;  
+}
+
+.input::placeholder {
+    color: #aaa;  
+}
+
+.button {
+    padding: 0.8rem 2rem;
+    background-color: var(--color-primary);
+    color:var(--color-white);
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+.button:active {
+    background-color: #004085;
+    transform: translateY(0);
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+}
+
+.button {
+    background-image: linear-gradient(45deg, #007bff, #00c6ff);
+}
+
+.googleLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.googleLogin img {
+    width: 20px;
+    margin-right: 0.5rem;
+}
+
+.googleLogin span {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox input {  
+    cursor: pointer;
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+
+.checkbox label {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 0;
+}
+
+.checkbox input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+@media (max-width: 1600px) {
+    .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .checkbox input {
+        cursor: pointer;
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+    
+    .checkbox label {
+        cursor: pointer;
+        font-size: 0.8rem;
+        color: #333;
+        line-height: 0;
+    }
+}
+
+
+/* Responsividade Telas grandes */
+@media (max-width: 1500px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageSection {
+       display: none;
+    }
+
+    .formSection {
+        width: 100%;
+        padding: 2rem 1rem;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .form {
+        width: 50%;
+    }
+}
+/* Responsividade Telas médias */
+@media (max-width: 768px) {
+    .button {
+        width: 100%;
+    }
+    .form {
+        width: 80%;
+        gap: 0.5rem;
+    }
+
+    .formSection h1 {
+        font-size: 1.5rem;
+    }
+
+    .formSection p {
+        font-size: 0.8rem;
+    }
+
+    .input {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        width: 200px;
+        margin: 0 auto;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .options {
+        font-size: 0.7rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .googleLogin {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+/* Responsividade Telas pequenas */
+@media (max-width: 568px) {
+    .button {
+        width: 100%;
+    }
+    .form {
+        width: 80%;
+        gap: 0.3rem;
+    }
+}
