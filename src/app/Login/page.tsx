@@ -6,7 +6,7 @@ import loginImage from "../../../public/assets/LoginImage.png";
 import starImage from "../../../public/assets/star.png";  // Imagem da estrela
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";  // Importando ícones de olho
-
+import Link from "next/link";
 const Login: React.FC = () => {
 
     const [passwordVisible, setPasswordVisible] = useState(false);
@@ -55,7 +55,7 @@ const Login: React.FC = () => {
                             <label htmlFor="remember"> Lembrar por 30 dias</label>
                         </div>
 
-                        <a href="#">Esqueceu sua senha?</a>
+                        <Link href="#">Esqueceu sua senha?</Link>
                     </div>
 
                     <button className={styles.button} type="submit">Log In</button>

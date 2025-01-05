@@ -6,7 +6,7 @@ import loginImage from "../../../public/assets/LoginImage.png";
 import starImage from "../../../public/assets/star.png";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
+import Link from "next/link";
 const Register: React.FC = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
@@ -70,7 +70,7 @@ const Register: React.FC = () => {
                 </div>
 
                 <div className={styles.options}>
-                    <a href="#">Já possui uma conta? Faça login</a>
+                    <Link href="Login">Já possui uma conta? Faça login</Link>
                 </div>
             </div>
         </div>
