@@ -103,7 +103,7 @@ transition: all 0.3s ease;
 /* Container do filtro */
 .filterContainer {
 display: flex;
-justify-content: center;
+justify-content:center;
 align-items: center;
 gap: 4px; /* Reduza o espaço entre o ícone e o filtro */
 }
@@ -117,6 +117,7 @@ margin-right: 7px;
 
 /* Select do filtro */
 .filter {
+
 cursor: pointer;
 padding: 8px;
 border-radius: 4px;
@@ -199,7 +200,8 @@ margin-right: 10px;
 }
 
 .taskCard {
-  width: 100%;
+  width: 300px;
+  height: 200px;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
