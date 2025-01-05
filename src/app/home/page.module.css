@@ -1,257 +1,282 @@
 /* Container principal */
 .container {
-    display: flex;
-    min-height: 100vh;
-    background-color: #f3f4f6;
-    color: #555;
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    width: 250px;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .sidebar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .sidebar nav ul {
-    list-style: none;
-    padding: 0;
-  }
+  display: flex;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  color: #555;
+}
 
-  .sidebar nav ul li {
-    display: flex;
-    align-items: center;
-      padding: 10px 0;
-      cursor: pointer;
-      font-weight: 500;
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  display: flex;
+  align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .sidebar nav ul li .icon {
+    margin-right: 10px; 
+    font-size: 18px;
+  }
+    .sidebar nav ul li:hover {
+      background-color: var(--card-background);
+      border-radius: 4px;
+      padding-left: 10px;
+      transition: all 0.3s ease;
     }
-    
-    .sidebar nav ul li .icon {
-      margin-right: 10px; 
-      font-size: 18px;
-    }
-      .sidebar nav ul li:hover {
-        background-color: var(--card-background);
-        border-radius: 4px;
-        padding-left: 10px;
-        transition: all 0.3s ease;
-      }
 
 
 /* Linha separadora */
 .divider {
-  margin: 15px 0;
-  border: none;
-  border-top: 1px solid #ddd;
+margin: 15px 0;
+border: none;
+border-top: 1px solid #ddd;
 }
 
 /* Seção inferior */
 .lowerSection {
-  padding-top: 10px;
+padding-top: 10px;
 }
 
 .lowerSection li {
-  padding: 10px 0;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
+padding: 10px 0;
+font-weight: 500;
+display: flex;
+align-items: center;
 }
 
 .lowerSection li:hover {
-  background-color: var(--card-background);
-  border-radius: 4px;
-  padding-left: 10px;
-  transition: all 0.3s ease;
+background-color: var(--card-background);
+border-radius: 4px;
+padding-left: 10px;
+transition: all 0.3s ease;
 }
 
 
 
 
 
-  
-  /* Conteúdo principal */
-  .mainContent {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  /* Barra superior */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 10px 20px;
-    border-radius: 8px;
-  }
-  
-  .searchBar {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  /* Container do filtro */
-.filterContainer {
+
+/* Conteúdo principal */
+.mainContent {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Barra superior */
+.header {
   display: flex;
-justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 4px; /* Reduza o espaço entre o ícone e o filtro */
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.searchBar {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+/* Container do filtro */
+.filterContainer {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 4px; /* Reduza o espaço entre o ícone e o filtro */
 }
 
 /* Ícone do filtro */
 .filterIcon {
-  font-size: 16px; /* Ajuste o tamanho se necessário */
-  color: #888;
-  margin-right: 7px;
+font-size: 16px; /* Ajuste o tamanho se necessário */
+color: #888;
+margin-right: 7px;
 }
 
 /* Select do filtro */
+.filter {
+cursor: pointer;
+padding: 8px;
+border-radius: 4px;
+border: 1px solid #ddd;
+margin: 0; /* Remova qualquer margem */
+}
+
+/* Informações do usuário */
+/* Adicionando estilo para o menu do usuário */
+.userInfo {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+
+.userInfo .userName {
+margin-right: 10px;
+font-weight: 500;
+color: #555;
+cursor: pointer;
+position: relative;
+}
+
+/* Menu de opções do usuário */
+.userMenu {
+position: absolute;
+top: 50px;  /* Ajuste conforme necessário */
+right: 0;
+background-color: #fff;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+width: 200px;
+z-index: 10;
+animation: slideDown 0.3s ease-out;
+}
+
+/* Animação de deslizar para baixo */
+@keyframes slideDown {
+from {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+/* Estilo para os itens do menu */
+.userMenu ul {
+list-style: none;
+padding: 10px 0;
+margin: 0;
+}
+
+.userMenu ul li {
+padding: 10px 15px;
+cursor: pointer;
+font-weight: 500;
+display: flex;
+align-items: center;
+}
+
+.userMenu ul li:hover {
+background-color: #f1f1f1;
+border-radius: 4px;
+}
+
+.userMenu .icon {
+margin-right: 10px;
+}
+
+
+/* Grid de tarefas */
+.taskGrid {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.taskCard {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.taskCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
 .filter {
   cursor: pointer;
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ddd;
-  margin: 0; /* Remova qualquer margem */
-}
-
-  /* Informações do usuário */
-/* Adicionando estilo para o menu do usuário */
-.userInfo {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.userInfo .userName {
   margin-right: 10px;
-  font-weight: 500;
-  color: #555;
-  cursor: pointer;
-  position: relative;
 }
 
-/* Menu de opções do usuário */
-.userMenu {
-  position: absolute;
-  top: 30px;  /* Ajuste conforme necessário */
-  right: 0;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  width: 200px;
-  z-index: 10;
-  animation: slideDown 0.3s ease-out;
-}
-
-/* Animação de deslizar para baixo */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Estilo para os itens do menu */
-.userMenu ul {
-  list-style: none;
-  padding: 10px 0;
+.taskBody h3 {
   margin: 0;
 }
 
-.userMenu ul li {
-  padding: 10px 15px;
-  cursor: pointer;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
+.taskBody p {
+  color: #555;
 }
 
-.userMenu ul li:hover {
-  background-color: #f1f1f1;
-  border-radius: 4px;
+.taskStatus {
+  color: green;
+  align-self: flex-end;
+  font-size: 20px;
 }
 
-.userMenu .icon {
-  margin-right: 10px;
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .userInfo .userName {
+    display: none; 
+  }
+    .searchBar{
+      width: 100%;
+      padding: 8px; 
+      font-size: 14px;
+    }
+    .filterIcon {
+      font-size: 16px; /* Ajuste o tamanho se necessário */
+      color: #888;
+      margin-right: 0;
+      margin-left: 10px;
+    }
+    
+  .userInfo .icon {
+    font-size: 24px; 
+  }
+  .mainContent {
+    padding: 10px;
+  }
+ .taskCard {
+  padding: 15px; 
+  width: 50%;
+}
+
+.taskGrid {
+  grid-template-columns: 1fr; 
+  gap: 15px; 
+}
 }
 
 
-  /* Grid de tarefas */
-  .taskGrid {
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-  }
-  
-  .taskCard {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-.taskCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  
-  .taskHeader {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  .filter {
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    margin-right: 10px;
-  }
-  
-  .taskBody h3 {
-    margin: 0;
-  }
-  
-  .taskBody p {
-    color: #555;
-  }
-  
-  .taskStatus {
-    color: green;
-    align-self: flex-end;
-    font-size: 20px;
-  }
-  
-  @media (max-width: 768px) {
-    .sidebar {
-      display: none;
-    }
-  
-    .mainContent {
-      padding: 10px;
-    }
-  
-    .taskGrid {
-      grid-template-columns: 1fr;
-    }
-  }
