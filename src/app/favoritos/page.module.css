@@ -1,0 +1,43 @@
+/* Estilos específicos para Favoritos */
+.pageTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6f61; /* Cor personalizada */
+}
+
+
+.sectionTitle {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.favoriteGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.favoriteCard {
+  cursor: pointer;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favoriteCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.favoriteCard h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.favoriteCard p {
+  margin: 0;
+  color: #666;
+}
