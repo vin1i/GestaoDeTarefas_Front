@@ -1,4 +1,3 @@
-"use client";
 import styles from "./page.module.css";
 import {
   FaUserCircle,
@@ -13,26 +12,22 @@ import {
   FaPlusCircle,
   FaCog,
   FaTags,
-  FaSignOutAlt,
-  FaExchangeAlt,
+ 
 } from "react-icons/fa";
-import { useState } from "react";
+import UserInfo from "./UserInfo";
+import Link from "next/link";
 
 export default function Home() {
-  const [userMenuVisible, setUserMenuVisible] = useState(false);
-
-  const toggleUserMenu = () => {
-    setUserMenuVisible(!userMenuVisible);
-  };
 
   return (
+
     <div className={styles.container}>
       {/* Sidebar */}
       <aside className={styles.sidebar}>
         <div className={styles.logo}>LOGO</div>
         <nav>
           <ul>
-            <li><span className={styles.icon}><FaStar /></span> Favoritos</li>
+            <li><Link href="favoritos"><span className={styles.icon}><FaStar /></span> Favoritos</Link></li>
             <li><span className={styles.icon}><FaTasks /></span> Tarefas</li>
             <li><span className={styles.icon}><FaProjectDiagram /></span> Projetos</li>
             <li><span className={styles.icon}><FaUsers /></span> Grupos</li>
@@ -61,30 +56,12 @@ export default function Home() {
             </select>
           </div>
 
-
-
-
-         {/*   o que precisa ser feito? - Criar um componente para gerenciar as informacoes do usuario e importar aqui */}
-          {/* Informações do usuário */}
-          <div className={styles.userInfo}>
-            <FaCheckCircle className={styles.icon} />
-            <span onClick={toggleUserMenu} className={styles.userName}>
-              Nome do usuário
-            </span>
-            <FaUserCircle className={styles.icon} />
-          </div>
-
-          {/* Menu de opções do usuário */}
-          {userMenuVisible && (
-            <div className={styles.userMenu}>
-              <ul>
-                <li><FaSignOutAlt className={styles.icon} /> Sair</li>
-                <li><FaExchangeAlt className={styles.icon} /> Trocar conta</li>
-              </ul>
-            </div>
-          )}
+        {/* Informações do usuário	 */}
+          <UserInfo/>
+                  {/* Informações do usuário	 */}
         </header>
-  {/*   o que precisa ser feito? - Criar um componente para gerenciar as informacoes do usuario e importar aqui */}
+        
+ 
 
 
 
