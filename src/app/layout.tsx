@@ -1,6 +1,9 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
+// import BottomBar from "@/components/BottomBar/BottomBar";
+import { Metadata } from "next";
 import "./globals.css";
+// import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -23,15 +26,16 @@ export const metadata: Metadata = {
   description: "Aplicação de Gestão de Tarefas",
 };
 
-export default function RootLayout({
+export default function ServerLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
+
   return (
     <html lang="pt-BR">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable}`}>
         {children}
+        {/* <BottomBar /> */}
+        {/* <ToastContainer/> */}
       </body>
     </html>
   );

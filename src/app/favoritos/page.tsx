@@ -1,14 +1,16 @@
 import styles from "./page.module.css";
-import homeStyles from "../home/page.module.css"; // Reutilizando estilos da Home
+import homeStyles from "../page.module.css"; // Reutilizando estilos da Home
 import {
   FaStar,
- 
   FaLayerGroup,
 } from "react-icons/fa";
-import UserInfo from "../home/UserInfo";
 import Link from "next/link";
+import ClientUserInfo from "@/components/UserInfo/ClientUserInfo";
+
 export default function Favoritos() {
   return (
+
+
     <div className={homeStyles.container}>
       {/* Sidebar permanece igual */}
       <aside className={homeStyles.sidebar}>
@@ -16,7 +18,7 @@ export default function Favoritos() {
         <nav>
           <ul>
            <Link href="favoritos"> <li><span className={homeStyles.icon}><FaStar /></span> Favoritos</li></Link>
-           <Link href="home"> <li><span className={homeStyles.icon}>< FaLayerGroup /></span> Outros</li></Link>
+           <Link href="/"> <li><span className={homeStyles.icon}>< FaLayerGroup /></span> Outros</li></Link>
           </ul>
         </nav>
       </aside>
@@ -25,8 +27,9 @@ export default function Favoritos() {
       <main className={homeStyles.mainContent}>
         <header className={homeStyles.header}>
           <h1 className={styles.pageTitle}>  Favoritos</h1>
-          <UserInfo/>
+          <ClientUserInfo/>
         </header>
+   
 
         {/* Conteúdo específico da página */}
         <section>
@@ -44,5 +47,6 @@ export default function Favoritos() {
         </section>
       </main>
     </div>
+
   );
 }

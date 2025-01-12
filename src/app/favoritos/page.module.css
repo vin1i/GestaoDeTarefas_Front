@@ -1,10 +1,9 @@
-/* Estilos específicos para Favoritos */
 .pageTitle {
   font-size: 24px;
   font-weight: bold;
   color: #ff6f61; /* Cor personalizada */
+  
 }
-
 
 .sectionTitle {
   font-size: 20px;
@@ -14,12 +13,12 @@
 
 .favoriteGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajuste flexível de colunas */
   gap: 20px;
+  padding: 20px; /* Padding para dar um pouco mais de espaço entre as colunas e a borda */
 }
 
 .favoriteCard {
-  
   cursor: pointer;
   background-color: #fff;
   padding: 15px;
@@ -29,12 +28,11 @@
 }
 
 .favoriteCard:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Leve elevação */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .favoriteCard h3 {
-  
   margin: 0 0 10px;
   color: #333;
 }
@@ -42,4 +40,19 @@
 .favoriteCard p {
   margin: 0;
   color: #666;
+}
+
+.bottomBar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 20px; /* Título menor em telas pequenas */
+  
+  }
+
+  .favoriteGrid {
+    padding: 10px; /* Menos padding em telas pequenas */
+  }
 }
