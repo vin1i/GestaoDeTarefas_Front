@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
-// import BottomBar from "@/components/BottomBar/BottomBar";
+import BottomBar from "@/components/BottomBar/BottomBar";
 import { Metadata } from "next";
 import "./globals.css";
-// import { ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const poppins = Poppins({
@@ -34,8 +34,8 @@ export default function ServerLayout({
     <html lang="pt-BR">
       <body className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable}`}>
         {children}
-        {/* <BottomBar /> */}
-        {/* <ToastContainer/> */}
+        <BottomBar />
+        <ToastContainer/>
       </body>
     </html>
   );
