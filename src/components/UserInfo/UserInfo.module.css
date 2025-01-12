@@ -1,0 +1,80 @@
+.userInfo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+    }
+    
+    .userInfo .userName {
+      
+    margin-right: 10px;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+    }
+    
+    /* Menu de opções do usuário */
+    .userMenu {
+     
+    position: absolute;
+    top: 50px;  /* Ajuste conforme necessário */
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 200px;
+    z-index: 10;
+    animation: slideDown 0.3s ease-out;
+    }
+/* Animação de deslizar para baixo */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
+  
+  /* Estilo para os itens do menu */
+  .userMenu ul {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  }
+  
+  .userMenu ul li {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  }
+  
+  .userMenu ul li:hover {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  }
+  
+  .userMenu .icon {
+  margin-right: 10px;
+  }
+  
+    @media (max-width: 768px) {
+       
+      
+        .userInfo .userName {
+          display: none; 
+        }
+       
+          
+        .userInfo .icon {
+          font-size: 24px; 
+        }
+  
+      }
+      
+      
