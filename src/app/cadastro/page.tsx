@@ -2,6 +2,7 @@
 import { toast } from "react-toastify";
 import styles from "./page.module.css";
 import Image from "next/image";
+import GoogleIcon from "../../../public/assets/google-logo.png";
 import loginImage from "../../../public/assets/LoginImage.png";
 import starImage from "../../../public/assets/star.png";
 import Link from "next/link";
@@ -46,12 +47,12 @@ const Register: React.FC = () => {
                 <RegisterForm onSubmit={handleRegister} />
 
                 <div className={styles.googleLogin}>
-                    <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon" />
+                    <Image src={GoogleIcon} alt="Google Icon" />
                     <span>Registrar com Google</span>
                 </div>
 
                 <div className={styles.options}>
-                    <Link href="Login">Já possui uma conta? Faça login</Link>
+                    <Link  href="Login">Já possui uma conta? <span className={styles.link}>Faça login</span></Link>
                 </div>
             </div>
         </div>

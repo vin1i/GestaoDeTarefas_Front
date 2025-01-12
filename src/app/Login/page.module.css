@@ -166,52 +166,23 @@
     color: #555;
 }
 
-.checkbox {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
 
-.checkbox input {  
-    cursor: pointer;
-    margin: 0;
-    width: auto;
-    height: auto;
-}
-
-.checkbox label {
-    cursor: pointer;
-    font-size: 0.9rem;
-    color: #333;
-    line-height: 0;
-}
-
-.checkbox input:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-@media (max-width: 1600px) {
-    .checkbox {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    
-    .checkbox input {
-        cursor: pointer;
-        margin: 0;
-        width: auto;
-        height: auto;
-    }
-    
-    .checkbox label {
-        cursor: pointer;
-        font-size: 0.8rem;
-        color: #333;
-        line-height: 0;
-    }
-}
+.link {
+    text-decoration: none;       
+                 
+    font-weight: 500;             
+    transition: color 0.3s ease, transform 0.3s ease;  
+  }
+  
+  .link:hover {
+    color: #4b7eb9;                 
+    transform: scale(1.1);      
+  }
+  
+  .link:focus {
+    outline: none;              
+    box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.6); 
+  }
 
 
 /* Responsividade Telas grandes */
@@ -264,14 +235,15 @@
         padding: 0.6rem 1.5rem;
         font-size: 0.9rem;
     }
-
+   
     .options {
-        font-size: 0.7rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
     }
-
+   
     .googleLogin {
         flex-direction: column;
         gap: 0.5rem;

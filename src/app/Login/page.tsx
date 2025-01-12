@@ -7,6 +7,7 @@ import loginImage from "../../../public/assets/LoginImage.png";
 import starImage from "../../../public/assets/star.png";  
 import GoogleIcon from "../../../public/assets/google-logo.png";
 import LoginForm from "@/components/AuthForm/LoginForm";  
+import Link from "next/link";
 
 const Login: React.FC = () => {
   const [isClient, setIsClient] = useState(false); // Estado para verificar se está no cliente
@@ -15,10 +16,10 @@ const Login: React.FC = () => {
     setIsClient(true); // Após a hidratação, seta como verdadeiro
   }, []);
 
-  const handleLogin = (email: string, password: string, remember: boolean) => {
+  const handleLogin = (email: string, password: string,) => {
     console.log("Email:", email);
     console.log("Password:", password);
-    console.log("Remember:", remember);
+    
   };
 
   if (!isClient) {
@@ -45,6 +46,10 @@ const Login: React.FC = () => {
           <Image src={GoogleIcon} alt="Google Icon" />
           <span> Log In com Google</span>
         </div>
+
+        <div className={styles.options}>
+                    <Link href="cadastro">Não tem uma conta? <span className={styles.link}>Crie uma agora!</span></Link>
+                </div>
       </div>
     </div>
   );
