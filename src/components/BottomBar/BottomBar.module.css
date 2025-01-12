@@ -1,0 +1,54 @@
+.bottomBar{
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+    .bottomBar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+  
+    .iconContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-size: 12px; /* Tamanho do texto */
+      color: #555;
+    }
+  
+    .icon {
+      font-size: 20px; /* Tamanho do ícone */
+      color: #555;
+      transition: color 0.3s ease;
+    }
+  
+    .iconLabel {
+      margin-top: 4px; /* Espaço entre o ícone e o texto */
+      font-size: 12px;
+      color: #777;
+    }
+  
+    .icon:hover {
+      color: #007bff; /* Destaque ao passar o mouse */
+    }
+  
+    .iconLabel:hover {
+      color: #007bff; /* Destaque no texto ao passar o mouse */
+    }
+   
+     
+      
+
+  }
